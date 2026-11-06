@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102b3f" />
+  <meta name="description" content="Ferramenta digital de apoio ao Posto de Trânsito de Estremoz." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>CHOCAS | Posto de Trânsito</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">PT</div><div><strong>CHOCAS</strong><small>POSTO DE TRÂNSITO</small></div></div>
+      <div class="unit-label">ESTREMOZ</div>
+      <nav id="nav">
+        <button class="nav-item active" data-view="inicio"><span>⌂</span> Início</button>
+        <button class="nav-item" data-view="infracoes"><span>⚖</span> Infrações e minutas</button>
+        <button class="nav-item" data-view="velocidades"><span>↗</span> Cálculo de velocidades</button>
+        <button class="nav-item" data-view="radares"><span>◉</span> Radares e autos</button>
+        <button class="nav-item" data-view="alcool"><span>◌</span> Álcool</button>
+        <button class="nav-item" data-view="folhas"><span>▤</span> Folhas do Excel</button>
+        <button class="nav-item" data-view="historico"><span>▣</span> Registos</button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> Dados carregados localmente<br><small>Sem envio automático de dados</small></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="menuBtn" aria-label="Abrir menu">☰</button><div><span class="eyebrow">FERRAMENTA DE APOIO OPERACIONAL</span><h1 id="pageTitle">Início</h1></div><div class="top-date" id="today"></div></header>
+      <section id="content" class="content"><div class="loading">A carregar dados do livro de trabalho…</div></section>
+      <footer>CHOCAS · Posto de Trânsito de Estremoz <span>Aplicação independente — confirmar sempre a legislação e os dados oficiais em vigor.</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
